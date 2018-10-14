@@ -1,0 +1,27 @@
+创建数据库
+  use 数据库名 => 如果数据库不存在则会直接创建这个数据库
+删除数据库
+  db.dropDatabase()
+删除集合
+  db.collection.drop()
+创建集合
+  db.createCollection()
+查看集合
+  show collections
+插入文档
+  db.集合名.insert(document) => document是一个json数组
+更新文档
+  db.collection.update(
+    <query>,
+    <update>,
+    {
+      upsert: <boolean>,
+      multi: <boolean>,
+      writeConcern: <document>
+    }
+  )
+删除文档
+  db.collection.remove(
+    <query>,
+    <justOne>
+  )
